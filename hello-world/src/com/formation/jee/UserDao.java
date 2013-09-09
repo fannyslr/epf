@@ -37,15 +37,13 @@ public class UserDao {
 			while (rs.next()) {
 				// Retrieve by column name
 				int id = rs.getInt("id");
-				int age = rs.getInt("age");
-				String first = rs.getString("first");
-				String last = rs.getString("last");
+				String login = rs.getString("login");
+				String password = rs.getString("password");
 
 				// Display values
 				System.out.print("ID: " + id);
-				System.out.print(", Age: " + age);
-				System.out.print(", First: " + first);
-				System.out.println(", Last: " + last);
+				System.out.print(", Login: " + login);
+				System.out.println(", Password: " + password);
 			}
 			// STEP 6: Clean-up environment
 			rs.close();
